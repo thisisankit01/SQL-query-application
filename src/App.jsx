@@ -8,7 +8,7 @@ import { query2 } from "./utils/queries";
 import { query3 } from "./utils/queries";
 
 const App = () => {
-  const csvFilePath = "../public/csv/orders.csv";
+  const csvFilePath = "https://dummy-data-csv.onrender.com/api/csv";
   const [filteredData, setFilteredData] = useState([]);
   const [originalData, setOriginalData] = useState([]);
   const [selectedQuery, setSelectedQuery] = useState(null); // Add selectedQuery state
