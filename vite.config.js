@@ -9,6 +9,7 @@ export default defineConfig({
     rollupOptions: {
       output: {
         assetFileNames: "static/[name]-[hash][extname]",
+        chunkSizeWarningLimit: 1000,
       },
     },
   },
