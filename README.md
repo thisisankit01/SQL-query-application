@@ -7,13 +7,14 @@ This is a dummy web-based application that allows users to input SQL-like querie
 - User-friendly interface to input and run SQL-like queries.
 - Predefined queries for quick data filtering.
 - Displays query results in a table format.
+- Data is hosted as API on [Data API](https://dummy-data-csv.onrender.com/api/csv)
 - Data is fetched from a CSV file using [PapaParse](https://www.papaparse.com/).
 - Built using [React](https://reactjs.org/) framework and [Ant Design](https://ant.design/) UI library.
 - Deployed on [Netlify](https://www.netlify.com/).
 
 ## Usage
 
-1. Visit the deployed application on [Netlify](https://your-netlify-link-here).
+1. Visit the deployed application on [Netlify](https://sql-ops.netlify.app/).
 2. Choose a query from the dropdown menu or input your custom query in the textarea.
 3. Click the "Submit" button to see the query results displayed in a table.
 
