@@ -37,29 +37,28 @@ const App = () => {
 
   const handleQuerySubmit = (query) => {
     setSelectedQuery(query);
-    if (query === "query1") {
-      const filteredResult = originalData.filter(
-        (item) => item.shipCountry === "Germany"
-      );
-      setFilteredData(filteredResult);
-    } else if (query === "query2") {
-      const filteredResult = originalData.filter(
-        (item) => item.employeeID === "5"
-      );
-      setFilteredData(filteredResult);
-    } else if (query === "query3") {
-      const filteredResult = originalData.filter(
-        (item) => item.orderDate > "1996-07-05"
-      );
-      setFilteredData(filteredResult);
-    }
+
+    const filteredResult = originalData.filter((item) => {
+      if (query === "query1") {
+        return item.shipCountry === "Germany";
+      }
+      if (query === "query2") {
+        return item.employeeID === "5";
+      }
+      if (query === "query3") {
+        return item.orderDate > "1996-07-05";
+      }
+      return true; // Default condition
+    });
+
+    setFilteredData(filteredResult);
   };
 
   const displayData = selectedQuery ? filteredData : originalData;
 
   return (
     <div className="max-w-[90%]">
-      <h1 className="text-center my-5">SQL-like Query Application</h1>
+      <h1 className="text-left my-5">SQL-like Query Application</h1>
       <QueryInput onQuerySelect={handleQuerySubmit} />
       <ResultTable csvFilePath={csvFilePath} data={displayData} />
     </div>

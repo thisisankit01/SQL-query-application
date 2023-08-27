@@ -11,7 +11,7 @@ const QueryInput = ({ onQuerySelect }) => {
   return (
     <div className="w-2xl py-5">
       <Select
-        placeholder="Select a SQL-like query to continue"
+        placeholder="Select a query to continue"
         onChange={handleQuerySelect}
       >
         <Select.Option value="query1">shipCountry = Germany</Select.Option>
