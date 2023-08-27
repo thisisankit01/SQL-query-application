@@ -59,7 +59,9 @@ const App = () => {
 
   return (
     <div className="max-w-[90%]">
-      <h1 className="text-left my-5">SQL-like Query Application</h1>
+      <h1 className="text-left my-5 text-xl font-semibold">
+        SQL-like Query Application
+      </h1>
       <QueryInput onQuerySelect={handleQuerySubmit} />
       {displayData.length > 0 ? (
         <ResultTable csvFilePath={csvFilePath} data={displayData} />
