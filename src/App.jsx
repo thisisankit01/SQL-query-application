@@ -9,6 +9,7 @@ import { query1 } from "./utils/queries";
 import { query2 } from "./utils/queries";
 // eslint-disable-next-line no-unused-vars
 import { query3 } from "./utils/queries";
+import SpinShimmer from "./components/Spin";
 
 const App = () => {
   const csvFilePath = "https://dummy-data-csv.onrender.com/api/csv";
@@ -60,7 +61,11 @@ const App = () => {
     <div className="max-w-[90%]">
       <h1 className="text-left my-5">SQL-like Query Application</h1>
       <QueryInput onQuerySelect={handleQuerySubmit} />
-      <ResultTable csvFilePath={csvFilePath} data={displayData} />
+      {displayData.length > 0 ? (
+        <ResultTable csvFilePath={csvFilePath} data={displayData} />
+      ) : (
+        <SpinShimmer />
+      )}
     </div>
   );
 };
