@@ -9,8 +9,9 @@ const ResultTable = ({ data }) => {
     <Table
       dataSource={data}
       columns={columns}
-      pagination={{ pageSize: 10 }}
+      pagination={{ pageSize: 10, size: "small" }}
       rowKey="orderID"
+      scroll={{ x: true }}
     />
   );
 };

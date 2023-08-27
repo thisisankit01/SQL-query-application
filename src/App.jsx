@@ -3,8 +3,11 @@ import Papa from "papaparse";
 import ResultTable from "./components/ResultTable";
 import QueryInput from "./components/QueryInput";
 
+// eslint-disable-next-line no-unused-vars
 import { query1 } from "./utils/queries";
+// eslint-disable-next-line no-unused-vars
 import { query2 } from "./utils/queries";
+// eslint-disable-next-line no-unused-vars
 import { query3 } from "./utils/queries";
 
 const App = () => {
